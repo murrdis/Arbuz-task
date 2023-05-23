@@ -11,7 +11,8 @@ import Foundation
 class CartViewModel: ObservableObject{
     // selectedProduct - is the list of products in cart
     @Published var selectedProducts: [Product: Int] = [:]
-    @Published var keysArray: [Product] = []
+    @Published var phoneVerificationStatus = false
+    @Published var selectedProductsKeysArray: [Product] = []
     @Published var totalSum: Int = 0
     @Published var bonuses: Int = 0
     @Published var addresses: [String] = []
@@ -33,7 +34,7 @@ class CartViewModel: ObservableObject{
         else{
             selectedProducts[product] = amount
         }
-        keysArray = Array(selectedProducts.keys)
+        selectedProductsKeysArray = Array(selectedProducts.keys)
         totalSum = selectedProducts.reduce(0) { (result, item) in
             let (product, quantity) = item
             return result + (product.price * quantity)

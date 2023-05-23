@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import SwiftUI
 
 class PineappleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        let swiftUIContainer = UIHostingController(rootView: PhoneAuthView())
+                addChild(swiftUIContainer)
+                view.addSubview(swiftUIContainer.view)
+                
+                swiftUIContainer.view.frame = view.bounds
+                
+                swiftUIContainer.didMove(toParent: self)
     }
-    
+
 
     /*
     // MARK: - Navigation

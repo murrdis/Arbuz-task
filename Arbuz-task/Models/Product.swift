@@ -12,7 +12,6 @@ struct Product: Identifiable, Hashable {
     var name: String
     var price: Int
     var jump: Int
-    var availableQuantity: Int
     var description: String
     var fullDescription: String
     var unitofMeasurement: String

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ItemInCartView: View {
     // MARK: - Properties
+    @ObservedObject var db = DataBase.db
     @State var product: Product
     @State var amountofChosenProduct: Int
     @State var showPopOverWindow: Bool = false
@@ -73,7 +74,7 @@ struct ItemInCartView: View {
             Button {
                 withAnimation(.easeOut(duration: 0.3)) {
                     if(amountofChosenProduct != 0) {
-                        amountofChosenProduct -= 1
+                        amountofChosenProduct -= product.jump
                     } else {
                         
                         //MAKE IT DISSAPEAR
@@ -103,19 +104,33 @@ struct ItemInCartView: View {
             }
             .frame(maxWidth: .infinity, alignment: .center)
             
-            
-            Button {
-                withAnimation(.easeOut(duration: 0.3)) {
-                    amountofChosenProduct += 1
+            if amountofChosenProduct >= db.goods[product] ?? 0 {
+                Button {
+                    withAnimation(.easeOut(duration: 0.3)) {
+                    }
+                    
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(.gray)
+                        .padding(.trailing, 15)
+                        .bold(true)
                 }
-                cartViewModel.syncronizeProductWithCart(product: product, amount: amountofChosenProduct)
-            } label: {
+                .padding(.horizontal, 5)
+            } else {
+                Button {
+                    
+                    withAnimation(.easeOut(duration: 0.3)) {
+                        amountofChosenProduct += product.jump
+                    }
+                    cartViewModel.syncronizeProductWithCart(product: product, amount: amountofChosenProduct)
+                } label: {
                     Image(systemName: "plus")
                         .foregroundColor(.black)
                         .padding(.trailing, 15)
                         .bold(true)
+                }
+                .padding(.horizontal, 5)
             }
-            .padding(.horizontal, 5)
         }
         .frame(width: 150, height: 40)
         
@@ -125,6 +140,6 @@ struct ItemInCartView: View {
 
 struct ItemInCartView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemInCartView(product: Constants.watermellon, amountofChosenProduct: 2)
+        ItemInCartView(product: DataBase.watermellon, amountofChosenProduct: 2)
     }
 }

@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController{
     
     var collectionView: UICollectionView?
     var cartViewModel = CartViewModel.cartObj
+    @ObservedObject var db = DataBase.db
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,18 +41,28 @@ class ViewController: UIViewController{
         collectionView?.backgroundColor = UIColor.white
     }
 
-
+    func presentPhoneAuthView() {
+        let phoneAuthView = PhoneAuthView() // Replace "PhoneAuthView" with the actual name of your SwiftUI view
+        
+        let hostingController = UIHostingController(rootView: phoneAuthView)
+        
+        let navigationController = UINavigationController(rootViewController: hostingController)
+        navigationController.modalPresentationStyle = .fullScreen // Adjust presentation style if needed
+        
+        present(navigationController, animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Constants.goods.count
+        return db.goods.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! CustomCollectionViewCell
         
-        myCell.setupView(product: Constants.goods[indexPath.row], amount: cartViewModel.selectedProducts[Constants.goods[indexPath.row]] ?? 0)
+        myCell.setupView(product: Array(db.goods.keys)[indexPath.row], amount: cartViewModel.selectedProducts[Array(db.goods.keys)[indexPath.row]] ?? 0)
         
         myCell.backgroundColor = UIColor.blue
         return myCell

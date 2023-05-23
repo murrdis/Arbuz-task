@@ -67,7 +67,7 @@ extension CartViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! CartViewCollectionCell
-        myCell.setupView(product: cartViewModel.keysArray[indexPath.row], amount: cartViewModel.selectedProducts[cartViewModel.keysArray[indexPath.row]] ?? 0)
+        myCell.setupView(product: cartViewModel.selectedProductsKeysArray[indexPath.row], amount: cartViewModel.selectedProducts[cartViewModel.selectedProductsKeysArray[indexPath.row]] ?? 0)
         return myCell
     }
 

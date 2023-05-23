@@ -147,6 +147,6 @@ struct DetailedProductView: View {
 //// MARK: - Preview
 //struct DetailedProductView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DetailedProductView(product: Constants.watermellon,amountofChosenProduct: .)
+//        DetailedProductView(product: DataBase.watermellon,amountofChosenProduct: .)
 //    }
 //}

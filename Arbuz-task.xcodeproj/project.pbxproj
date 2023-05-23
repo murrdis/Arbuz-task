@@ -19,6 +19,9 @@
 		33A787A02A1CF89F00BA273F /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 33A7879F2A1CF89F00BA273F /* FirebaseInAppMessaging-Beta */; };
 		33A787A22A1CF89F00BA273F /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 33A787A12A1CF89F00BA273F /* FirebaseInAppMessagingSwift-Beta */; };
 		33A787A42A1CF89F00BA273F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 33A787A32A1CF89F00BA273F /* FirebaseMessaging */; };
+		33A787A62A1D01D400BA273F /* PhoneAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A787A52A1D01D400BA273F /* PhoneAuthView.swift */; };
+		33A787A92A1D070300BA273F /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A787A82A1D070300BA273F /* FirebaseAuthService.swift */; };
+		33A787AD2A1D1B4100BA273F /* TabBarControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A787AC2A1D1B4100BA273F /* TabBarControllerWrapper.swift */; };
 		33A892342A1CD7CC001599D3 /* showingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A892332A1CD7CC001599D3 /* showingModel.swift */; };
 		33A892372A1CDDD3001599D3 /* DeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A892362A1CDDD3001599D3 /* DeliveryAddressView.swift */; };
 		33A892392A1CDF3E001599D3 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A892382A1CDF3E001599D3 /* CustomHeaderView.swift */; };
@@ -42,7 +45,7 @@
 		33F0542E2A168717009A0F32 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0542D2A168717009A0F32 /* CartViewModel.swift */; };
 		33F054312A1687A9009A0F32 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 33F054302A1687A9009A0F32 /* iPhoneNumberField */; };
 		33F054342A168885009A0F32 /* iTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 33F054332A168885009A0F32 /* iTextField */; };
-		33F054362A16891A009A0F32 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F054352A16891A009A0F32 /* Constants.swift */; };
+		33F054362A16891A009A0F32 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F054352A16891A009A0F32 /* DataBase.swift */; };
 		33F054382A17C7CC009A0F32 /* ItemInCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F054372A17C7CC009A0F32 /* ItemInCartView.swift */; };
 		33F0543C2A18CDCE009A0F32 /* CartViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0543B2A18CDCE009A0F32 /* CartViewCollectionCell.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		33A787922A1CEC6500BA273F /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		33A787942A1CEE0400BA273F /* AddressModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModelView.swift; sourceTree = "<group>"; };
 		33A787982A1CF6A400BA273F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33A787A52A1D01D400BA273F /* PhoneAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthView.swift; sourceTree = "<group>"; };
+		33A787A82A1D070300BA273F /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		33A787AC2A1D1B4100BA273F /* TabBarControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerWrapper.swift; sourceTree = "<group>"; };
 		33A892332A1CD7CC001599D3 /* showingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showingModel.swift; sourceTree = "<group>"; };
 		33A892362A1CDDD3001599D3 /* DeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressView.swift; sourceTree = "<group>"; };
 		33A892382A1CDF3E001599D3 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		33F0541E2A168592009A0F32 /* ProductFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFirstView.swift; sourceTree = "<group>"; };
 		33F054222A1685CA009A0F32 /* FinalStageofOrderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalStageofOrderingView.swift; sourceTree = "<group>"; };
 		33F0542D2A168717009A0F32 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
-		33F054352A16891A009A0F32 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33F054352A16891A009A0F32 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		33F054372A17C7CC009A0F32 /* ItemInCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInCartView.swift; sourceTree = "<group>"; };
 		33F0543B2A18CDCE009A0F32 /* CartViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33A787A72A1D06E700BA273F /* PhoneAuth */ = {
+			isa = PBXGroup;
+			children = (
+				33A787A52A1D01D400BA273F /* PhoneAuthView.swift */,
+				33A787A82A1D070300BA273F /* FirebaseAuthService.swift */,
+			);
+			path = PhoneAuth;
+			sourceTree = "<group>";
+		};
 		33A892352A1CDD91001599D3 /* FinalStageOfOrdering */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +150,7 @@
 			children = (
 				33F053F32A1682AD009A0F32 /* AppDelegate.swift */,
 				33F053F52A1682AD009A0F32 /* SceneDelegate.swift */,
-				33F054352A16891A009A0F32 /* Constants.swift */,
+				33F054352A16891A009A0F32 /* DataBase.swift */,
 				33F054092A168315009A0F32 /* Controllers */,
 				33F054122A16840C009A0F32 /* Models */,
 				33F054192A16846C009A0F32 /* Views */,
@@ -158,6 +173,7 @@
 				33F0540C2A16838D009A0F32 /* CartViewController.swift */,
 				33F0540E2A1683AC009A0F32 /* HeartViewController.swift */,
 				33F054102A1683E1009A0F32 /* PineappleViewController.swift */,
+				33A787AC2A1D1B4100BA273F /* TabBarControllerWrapper.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +197,7 @@
 				33F054372A17C7CC009A0F32 /* ItemInCartView.swift */,
 				33A3AE3E2A1BDD7C004041F1 /* FirstAddressView.swift */,
 				33A3AE402A1BE831004041F1 /* SecondAddressView.swift */,
+				33A787A72A1D06E700BA273F /* PhoneAuth */,
 				33A892352A1CDD91001599D3 /* FinalStageOfOrdering */,
 				33F054282A1686B2009A0F32 /* ViewModels */,
 			);
@@ -287,6 +304,7 @@
 				33F053F82A1682AD009A0F32 /* ViewController.swift in Sources */,
 				33F054232A1685CA009A0F32 /* FinalStageofOrderingView.swift in Sources */,
 				33F0541D2A16855D009A0F32 /* DetailedProductView.swift in Sources */,
+				33A787A62A1D01D400BA273F /* PhoneAuthView.swift in Sources */,
 				33A3AE3F2A1BDD7C004041F1 /* FirstAddressView.swift in Sources */,
 				33F054142A168431009A0F32 /* Product.swift in Sources */,
 				33F054082A1682F8009A0F32 /* TabBarController.swift in Sources */,
@@ -294,7 +312,7 @@
 				33F053F42A1682AD009A0F32 /* AppDelegate.swift in Sources */,
 				33F0540D2A16838D009A0F32 /* CartViewController.swift in Sources */,
 				33F054112A1683E1009A0F32 /* PineappleViewController.swift in Sources */,
-				33F054362A16891A009A0F32 /* Constants.swift in Sources */,
+				33F054362A16891A009A0F32 /* DataBase.swift in Sources */,
 				33A787952A1CEE0400BA273F /* AddressModelView.swift in Sources */,
 				33A787932A1CEC6500BA273F /* CustomTextFieldView.swift in Sources */,
 				33F053F62A1682AD009A0F32 /* SceneDelegate.swift in Sources */,
@@ -302,9 +320,11 @@
 				33F054382A17C7CC009A0F32 /* ItemInCartView.swift in Sources */,
 				33A892392A1CDF3E001599D3 /* CustomHeaderView.swift in Sources */,
 				33A892372A1CDDD3001599D3 /* DeliveryAddressView.swift in Sources */,
+				33A787AD2A1D1B4100BA273F /* TabBarControllerWrapper.swift in Sources */,
 				33F0543C2A18CDCE009A0F32 /* CartViewCollectionCell.swift in Sources */,
 				33F0542E2A168717009A0F32 /* CartViewModel.swift in Sources */,
 				33F0540F2A1683AC009A0F32 /* HeartViewController.swift in Sources */,
+				33A787A92A1D070300BA273F /* FirebaseAuthService.swift in Sources */,
 				33F0541B2A168524009A0F32 /* CustomCollectionViewCell.swift in Sources */,
 				33A787912A1CEB3300BA273F /* TipsModelView.swift in Sources */,
 				33A3AE4B2A1CB1E5004041F1 /* TextInputField.swift in Sources */,

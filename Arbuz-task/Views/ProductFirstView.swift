@@ -129,7 +129,7 @@ struct ProductFirstView: View {
 // MARK: - Preview
 struct ProductFirstView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductFirstView(product: Constants.watermellon, amountofChosenProduct: 0)
+        ProductFirstView(product: DataBase.watermellon, amountofChosenProduct: 0)
             .background(.white)
             .frame(width: 150, height: 250)
             .previewLayout(.sizeThatFits)

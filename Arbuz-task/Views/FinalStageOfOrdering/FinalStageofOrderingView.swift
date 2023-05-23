@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import iPhoneNumberField
-import iTextField
 
 struct FinalStageofOrderingView: View {
     
@@ -24,7 +22,7 @@ struct FinalStageofOrderingView: View {
     @State private var isBonusesTapped = false
     @State private var showingPaymentAlert = false
     @State private var showingOrderAlert = false
-    
+    @State private var showingPhoneVerificationAlert = false
     
     @State var typedTip = ""
     @State var typedFollowPeriod = ""
@@ -46,6 +44,7 @@ struct FinalStageofOrderingView: View {
     @State private var selectedOwnFollowPeriod = 0
 
     @ObservedObject var cartViewModel = CartViewModel.cartObj
+    @ObservedObject var db = DataBase.db
     
     @State private var address = CartViewModel.cartObj.currentAddress
     @State private var total = CartViewModel.cartObj.totalSum
@@ -260,7 +259,14 @@ struct FinalStageofOrderingView: View {
                                     }
                                 }
                                 Button() {
-                                    if nameText != "" {
+                                    if !cartViewModel.phoneVerificationStatus {
+                                        if isBonusesTapped {
+                                            cartViewModel.bonuses = 0
+                                        } else {
+                                            cartViewModel.bonuses += (cartViewModel.totalSum * 5/100)
+                                        }
+                                        showingPhoneVerificationAlert.toggle()
+                                    } else if nameText != "" {
                                         if isBonusesTapped {
                                             cartViewModel.bonuses = 0
                                         } else {
@@ -326,9 +332,19 @@ struct FinalStageofOrderingView: View {
             } message: {
                 Text("Введите все необходимые данные!")
             }
+        
+            .alert("Ошибка заказа", isPresented: $showingPhoneVerificationAlert) {
+            } message: {
+                Text("Вы не авторизованы!")
+            }
             .alert("Подписка оформлена!", isPresented: $showingPaymentAlert) {
                 Button{
                     presentationMode.wrappedValue.dismiss()
+                    for (product, quantity) in cartViewModel.selectedProducts {
+                        if quantity >= db.goods[product] ?? 0 {
+                            db.goods.removeValue(forKey: product)
+                        }
+                    }
                     cartViewModel.selectedProducts = [:]
                 } label: {
                     Text("OK")
