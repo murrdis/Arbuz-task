@@ -1,24 +1,21 @@
 # Arbuz-task
 
-В приложении пользователь может:
-- составить корзину из сочетания нескольких продуктов;
-- выбрать день недели и период доставки;
-- указать адрес доставки, телефон, имя заказчика;
-- выбрать срок подписки на доставку этих продуктов;
+In the application, the user can:
+- create a basket from a combination of several products;
+- choose the day of the week and the delivery period;
+- specify the delivery address, phone number, name of the customer;
+- choose a subscription period for the delivery of these products;
 
+Added:
+- OTP authentication
+- Validation of fields
+- It is taken into account that the weight of large vegetables and fruits may be different;
+- It is taken into account that the products after the order may go out of stock
+- Checking promo codes
+- БBonus system
+- Tips
+- МPayment methods and replacement of goods
 
-Добавлены: 
-- Аутентификация по OTP
-- Валидация полей
-- Учитывается, что вес у крупных овощей и фруктов может быть разным;
-- Учитывается, что продукты после заказа могут выйти из наличия
-- Проверка промокодов
-- Бонусная система
-- Чаевые
-- Методы оплаты и замена товара
-- Родной дизайн
-
-
-Видео-демонстрация приложения
+Video demonstration of the application:
 
 https://drive.google.com/file/d/1h1qTt5Va57Dl_uI-aElTBcwg9LEkY3Fg/view?usp=sharing
