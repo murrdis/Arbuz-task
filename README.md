@@ -12,9 +12,9 @@ Added:
 - It is taken into account that the weight of large vegetables and fruits may be different;
 - It is taken into account that the products after the order may go out of stock
 - Checking promo codes
-- БBonus system
+- Bonus system
 - Tips
-- МPayment methods and replacement of goods
+- Payment methods and replacement of goods
 
 Video demonstration of the application:
 
